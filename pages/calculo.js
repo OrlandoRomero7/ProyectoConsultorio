@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from '@mantine/form';
 import Layout from '../components/Layout'
-import {Input,Select,TextInput, Checkbox, Button, Group, Box,Stack, SegmentedControl, Text, SimpleGrid, Tabs, Table, NumberInput, Badge, ScrollArea} from '@mantine/core';
+import {Center,Input,Select,TextInput, Checkbox, Button, Group, Box,Stack, SegmentedControl, Text, SimpleGrid, Tabs, Table, NumberInput, Badge, ScrollArea} from '@mantine/core';
 import styles from '../styles/Calculo.module.css'
 import { IconPhoto, IconMessageCircle, IconSettings, IconPercentage, IconAmbulance, IconScale, IconCarrot, IconMeat } from '@tabler/icons';
 
@@ -20,10 +20,10 @@ const Calculo = () => {
         factor: '',
         tipo: ''
       },
-      geb: '',
+      geb: 0,
       fa: '',
       ter: '',
-      get: '',
+      get: 0,
       text_geb: '',
       text_get:'',
             
@@ -140,11 +140,15 @@ const Calculo = () => {
   return (
     <Layout>
        <Tabs color="green" radius="xs" defaultValue="calculo">
-      <Tabs.List>
+        <Center>
+        <Tabs.List>
         <Tabs.Tab value="calculo" icon={<IconCarrot size={18} />}>Calculo Dietetico</Tabs.Tab>
         <Tabs.Tab value="porcentaje" icon={<IconMeat size={18} />}>Tabla Porcentaje</Tabs.Tab>
         <Tabs.Tab value="gramokg" icon={<IconScale size={18} />}>Tabla Gramo / Kilogramo</Tabs.Tab>
       </Tabs.List>
+
+        </Center>
+      
 
 
       <Tabs.Panel value="gramoKg" pt="xs">
@@ -191,8 +195,8 @@ const Calculo = () => {
           /> 
           <Button color="green" type='submit' radius="md" >Calculo Dietetico</Button>
           
-          <Badge variant="dot" size="md" color="red">Tu GEB es: {form.values.geb}</Badge>
-          <Badge variant="dot" size="md"color="green">Tu GET es: {form.values.get}</Badge>
+          <Badge variant="dot" size="xl" color="red">Tu GEB es: {(form.values.geb).toFixed(2)}</Badge>
+          <Badge variant="dot" size="xl"color="green">Tu GET es: {(form.values.get).toFixed(2)}</Badge>
         </Stack>
       </form>
       </div>
@@ -201,13 +205,13 @@ const Calculo = () => {
       
           <Tabs.Panel  value="porcentaje" pt="xs" >
           <Stack align="center">
-            <TablaPorcentaje data={form.values.get} data2={form.values.persona.peso}></TablaPorcentaje>
+            <TablaPorcentaje data={(form.values.get).toFixed(2)} data2={form.values.persona.peso}></TablaPorcentaje>
             </Stack>
           </Tabs.Panel>
 
           <Tabs.Panel value="gramokg" pt="xs">
           <Stack  align="center">
-            <TablaGramoKg peso={form.values.persona.peso} get={form.values.get}></TablaGramoKg>
+            <TablaGramoKg peso={form.values.persona.peso} get={(form.values.get).toFixed(2)}></TablaGramoKg>
             </Stack>
           </Tabs.Panel>
 

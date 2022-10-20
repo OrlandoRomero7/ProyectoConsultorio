@@ -28,16 +28,18 @@ const Barra = ({children}) => {
               />
             </MediaQuery>
           
-          <Link href="/inicio" passHref><NavLink component="a" className={styles.navs} label="Home" icon={<IconHome2 size={16} stroke={1.5} />}/></Link>
-          {/* <NavLink href='/' icon={<IconHome2 size={16} stroke={1.5} />}>Inicio</NavLink> */}
+          <Link href="/inicio" passHref>
+            <NavLink component="a" className={styles.navs} label="Home" icon={<IconHome2 size={16} stroke={1.5} />}/>
+            </Link>
+          
           <Link href="/bmi" passHref>
             <NavLink component="a" label="BMI" className={styles.navs} icon={<IconCheckupList size={16} stroke={1.5} />}/>
           </Link>
-          {/* <Link href='/bmi'>BMI</Link> */}
+          
           <Link href="/calculo" passHref>
             <NavLink component="a" label="Calculos" className={styles.navs} icon={<IconCalculator size={16} stroke={1.5} />}/>
           </Link>
-          {/* <Link href='/calculo'>Calculo</Link> */}
+          
           <Link href="/buscador" passHref>
             <NavLink component="a" className={styles.navs} icon={<IconSearch size={16} stroke={1.5} />} label="Alimentos"   />
           </Link>
