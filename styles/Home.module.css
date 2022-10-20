@@ -1,0 +1,9 @@
+.barraNavegacion{
+  background-color: rgb(147, 213, 239)
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}

@@ -1,0 +1,17 @@
+.main{
+    margin: 0 auto;
+    margin-top: 10rem;
+    background-color:rgba(25, 151, 42, 0.42);
+    width: 35rem;
+    border-radius: 2rem;
+    height: 30rem;
+   
+   
+}
+.texto{
+    text-align: center;
+}
+
+.stack{
+    padding: 5rem;
+}

@@ -1,0 +1,104 @@
+.loginContainer{
+    display: flex;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  
+}
+.loginImage{
+    float:left; 
+    margin-right:20px;
+    display: flex;
+    align-items: center;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.671)
+}
+.carousel{
+    border-radius: 1rem;
+}
+.inputs{
+    width: 80%;
+    
+}
+.text h2{
+    font-size: 2rem;
+    justify-content: left;
+    text-align: left;
+
+}
+.text{
+    margin: 0 4rem 0 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+.text p{
+    font-size: 1.4rem;
+}
+.stack{
+    width: 80%;
+    height: auto;
+    background-color: transparent;
+    margin: 0 4rem 0rem 4rem;
+}
+.helpIcon{
+    justify-content: right;
+    align-items: right;
+    display: flex;
+    vertical-align: middle;
+    margin: 0.4rem 1rem 0 0rem;
+}
+.register{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem
+}
+.register p{
+    
+    font-size: 1.2rem;
+}
+.register a{
+    
+    font-size: 1.2rem;
+    color: limegreen;
+    text-decoration: underline;
+
+}
+.registerLink{
+    text-decoration: underline;
+    color: red;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1280px) {
+    .loginImage{  
+        display: none;
+    }
+    .loginContainer{
+        align-items: center;
+        margin: 0rem;
+    }
+    .stack{
+        margin: 3rem;
+    }
+    .center{
+        padding-top: 0;
+    }
+    
+}
+.recover{
+    
+    font-size: 1.2rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+.down{
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+    padding-top: 3rem;
+    display: flex;
+}
